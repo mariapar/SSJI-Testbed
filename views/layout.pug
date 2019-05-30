@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/heroic-features.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-submenu.css')
+    script(src='/javascripts/bootstrap-submenu.js')
+  body
+    nav(class='navbar navbar-inverse navbar-fixed-top', role='navigation')
+      div(class='container')
+        div(class='navbar-header')
+          button(type='button', class='navbar-toggle', data-toggle='collapse', data-targer='#bs-example-navbar-collapse-1')
+            span(class='sr-only') Toggle navigation
+            span(class='icon-bar')
+            span(class='icon-bar')
+            span(class='icon-bar')
+          a(class='navbar-brand')
+            img(style='max-width:43px; margin-top: -11px;', src='/images/logo_new.jpg')
+          a(class='navbar-brand', href='/index') SSJI-testbed
+
+
+    div(class='container')
+      header(class='jumbotron hero-spacer')
+        h2
+          b SSJI testbed - A Server-Side JavaScript Injection test environment!
+        p A collection of web pages, vulnerable to 
+          b 
+            a(href='https://www.owasp.org/index.php/Command_Injection') Server Side JavaScript Command injection flaws
+          | , used to test with
+          b 
+            a(href='https://github.com/commixproject/commix') commix
+          | 's and 
+          b
+            a(href='https://github.com/esmog/nodexp') nodexp
+          | 's 
+          b detection 
+          | and 
+          b exploitation  
+          | features.
+
+      div(class='container')
+        block content
+      
+      hr
+      footer
+        div(class='row text-center')
+          div(class='col-lg-12')
+            p Recreated in Node.js by Maria Parara - Based 
+              | on 
+              a(href="https://github.com/commixproject/commix-testbed") Commix-Testbed 
+              | of Anastasios Stasinopoulos.
+    script(src='/javascripts/jquery.js')
+    script(src='/javascripts/bootstrap.min.js')

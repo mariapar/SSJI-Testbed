@@ -1,0 +1,199 @@
+extends layout
+
+block content
+  div(class='row')
+    div(class='col-lg-12 text-center')
+      h3 Command injection scenarios categories
+      br
+
+      div(class='row')
+        div(class='col-md-3 col-sm-6 hero-feature')
+          div(class='panel panel-info')
+            div(class='panel-heading')
+              h4 1. Regular (GET | POST)  
+            ul(class='list-group')
+              li(class='list-group-item') Classic regular example 
+                br
+                | (
+                a(href='scenarios/regular/GET/classic') GET | 
+                a(href='scenarios/regular/POST/classic') POST
+                | )
+              li(class='list-group-item') Classic (Base64) regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_b64') GET | 
+                a(href='scenarios/regular/POST/classic_b64') POST
+                | )
+              li(class='list-group-item') Classic (Hex) regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_hex') GET | 
+                a(href='scenarios/regular/POST/classic_hex') POST
+                | )
+              li(class='list-group-item') Classic single-quote example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_quote') GET | 
+                a(href='scenarios/regular/POST/classic_quote') POST
+                | )
+              li(class='list-group-item') Classic double-quote example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_double_quote') GET | 
+                a(href='scenarios/regular/POST/classic_double_quote') POST
+                | )
+              li(class='list-group-item') Classic non-space example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_non_space') GET | 
+                a(href='scenarios/regular/POST/classic_non_space') POST
+                | )
+              li(class='list-group-item') Classic blacklisting example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_blacklisting') GET | 
+                a(href='scenarios/regular/POST/classic_blacklisting') POST
+                | )
+              li(class='list-group-item') Classic hashing example
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_hash') GET | 
+                a(href='scenarios/regular/POST/classic_hash') POST
+                | )
+              li(class='list-group-item') Classic example & Basic HTTP Authentication
+                br
+                | (
+                a(href='scenarios/regular/GET/classic_basic_auth') GET | 
+                a(href='scenarios/regular/POST/classic_basic_auth') POST
+                | )
+              li(class='list-group-item') Blind regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/blind') GET | 
+                a(href='scenarios/regular/POST/blind') POST
+                | )
+              li(class='list-group-item') Double Blind regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/double_blind') GET | 
+                a(href='scenarios/regular/POST/double_blind') POST
+                | )
+              li(class='list-group-item') Eval regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/eval') GET | 
+                a(href='scenarios/regular/POST/eval') POST
+                | )
+              li(class='list-group-item') Eval (Base64) regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/eval_b64') GET | 
+                a(href='scenarios/regular/POST/eval_b64') POST
+                | )
+              li(class='list-group-item') Classic (JSON) regular example
+                br
+                | (
+                a(href='scenarios/regular/POST/classic_json') POST
+                | )
+              li(class='list-group-item') Blind (JSON) regular example
+                br
+                | (
+                a(href='scenarios/regular/POST/blind_json') POST
+                | )
+              li(class='list-group-item') Eval (JSON) regular example
+                br
+                | (
+                a(href='scenarios/regular/POST/eval_json') POST
+                | )
+              li(class='list-group-item') Preg_match() regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/preg_match') GET | 
+                a(href='scenarios/regular/POST/preg_match') POST
+                | )
+              li(class='list-group-item') Preg_match() blind example
+                br
+                | (
+                a(href='scenarios/regular/GET/preg_match_blind') GET | 
+                a(href='scenarios/regular/POST/preg_match_blind') POST
+                | )
+              li(class='list-group-item') Str_Replace() regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/str_replace') GET | 
+                a(href='scenarios/regular/POST/str_replace') POST
+                | )
+              li(class='list-group-item') Create_Function() regular example
+                br
+                | (
+                a(href='scenarios/regular/GET/create_function') GET | 
+                a(href='scenarios/regular/POST/create_function') POST
+                | )
+
+        .col-md-3.col-sm-6.hero-feature
+          .panel.panel-info
+            .panel-heading
+              h4 2. Regex Filters 
+            ul.list-group
+              li.list-group-item
+                a(href='scenarios/filters/lax_domain_name') Regex for domain name validation
+              li.list-group-item
+                a(href='scenarios/filters/nested_quotes') Nested quotes
+              li.list-group-item
+                a(href='scenarios/filters/no_colon_no_pipe_no_ampersand_no_dollar') Regex filter for colon/pipe/ampersand/dollar
+              li.list-group-item
+                a(href='scenarios/filters/no_space') Regex filter for spaces
+              li.list-group-item
+                a(href='scenarios/filters/no_space_no_colon_no_pipe_no_ampersand') Regex filter for space/colon/pipe/ampersand
+              li.list-group-item
+                a(href='scenarios/filters/no_space_no_colon_no_pipe_no_ampersand_no_dollar') Regex filter for space/colon/pipe/ampersand/dollar
+              li.list-group-item
+                a(href='scenarios/filters/no_white_chars') Regex filter for white chars
+              li.list-group-item
+                a(href='scenarios/filters/simple_stop_alphanum') Alphanum for input end
+              li.list-group-item
+                a(href='scenarios/filters/no_white_chars_stop_alnum') Alphanum for input end (filter for white chars)
+              li.list-group-item
+                a(href='scenarios/filters/simple_start_alphanum') Alphanum for input start
+              li.list-group-item
+                a(href='scenarios/filters/no_white_chars_start_alphanum') Alphanum for input start (filter for white chars)
+              li.list-group-item
+                a(href='scenarios/filters/multiple_os_commands_blacklisting')  Regex filter for OS commands (Windows / *nix)
+
+        .col-md-3.col-sm-6.hero-feature
+          .panel.panel-info
+            .panel-heading
+              h4 3. User-Agent HTTP Header 
+            ul.list-group
+              li.list-group-item
+                a(href='scenarios/user-agent/ua(classic)') Classic user-agent-based example
+              li.list-group-item
+                a(href='scenarios/user-agent/ua(blind)') Blind user-agent-based example
+              li.list-group-item
+                a(href='scenarios/user-agent/ua(eval)') Eval user-agent-based example
+
+        .col-md-3.col-sm-6.hero-feature
+          .panel.panel-info
+            .panel-heading
+              h4 4. Cookie HTTP Header
+            ul.list-group
+              li.list-group-item
+                a(href="scenarios/cookie/cookie(classic)") Classic cookie-based example
+              li.list-group-item
+                a(href='scenarios/cookie/cookie(b64)') Classic cookie-based (Base64) example
+              li.list-group-item
+                a(href='scenarios/cookie/cookie(blind)') Blind cookie-based example
+              li.list-group-item
+                a(href='scenarios/cookie/cookie(eval)') Eval cookie-based example
+
+        .col-md-3.col-sm-6.hero-feature
+          .panel.panel-info
+            .panel-heading
+              h4 5. Referer HTTP Header
+            ul.list-group
+              li.list-group-item
+                a(href='scenarios/referer/referer(classic)') Classic referer-based example
+              li.list-group-item
+                a(href='scenarios/referer/referer(blind)') Blind referer-based example
+              li.list-group-item
+                a(href='scenarios/referer/referer(eval)') Eval referer-based example
