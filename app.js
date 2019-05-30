@@ -47,7 +47,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const port = 80
-app.listen(port, () => console.log(`SSJI-Testbed app listening on port ${port}!`))
-
 module.exports = app;
